@@ -1,0 +1,22 @@
+<div class="cart-container">
+  <h3>🛒 Carrito de compras</h3>
+  <ul class="cart-list">
+    @for (plant of cartList$ | async; track plant.name) {
+      <li>
+        <span>{{ plant.name }}</span>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span class="cart-quantity">{{ plant.quantity }}</span>
+
+          <!-- Botón con emoji -->
+          <button
+            class="remove-btn"
+            (click)="removeOneFromCart(plant.name)"
+            [disabled]="plant.quantity <= 0"
+          >
+            ➖
+          </button>
+        </div>
+      </li>
+    }
+  </ul>
+</div>

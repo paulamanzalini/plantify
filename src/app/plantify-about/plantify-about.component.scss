@@ -1,0 +1,19 @@
+p {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2f3e2e;
+  background-color: #f4f9f4;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: justify;
+  transition: all 0.3s ease-in-out;
+}
+
+p:hover {
+  background-color: #e9f6ec;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}

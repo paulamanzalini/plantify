@@ -1,0 +1,56 @@
+.plant-title {
+  font-size: 30px;
+  color: #2f5130;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.plant-subtitle {
+  font-size: 1.1rem;
+  color: #4a7c59;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.plant-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.plant-table th {
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #dceddc !important;
+  color: #2f5130;
+  text-transform: uppercase;
+}
+
+table tr.clearance {
+  border: 2px solid rgba(12, 148, 12, 0.497);
+}
+
+table tr.clearance td {
+  background-color: rgba(174, 234, 174, 0.491);
+}
+
+.stock-badge {
+  display: inline-block;
+  background-color: #f8d7da;
+  color: #842029;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 0 1px #f5c2c7 inset;
+}
+
+table tr.no-stock td {
+  background-color: #fdfdfd;
+}
+
+

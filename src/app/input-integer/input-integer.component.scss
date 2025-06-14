@@ -1,0 +1,21 @@
+.btn {
+    padding: 4px 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #1c1f23;
+  }
+  
+  .input-quantity {
+    width: 40px;
+    padding: 4px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    margin: 0 4px;
+  }

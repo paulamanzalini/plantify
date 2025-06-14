@@ -1,0 +1,45 @@
+<h3 class="plant-title">🌿 Nuestra Selección de Plantas</h3>
+<p class="plant-subtitle">Explorá nuestras plantas favoritas. Verdes, únicas y listas para tu hogar.</p>
+
+<table class="table table-hover align-middle text-center plant-table">
+  <thead class="table-success">
+    <tr>
+      <th>Imagen</th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Precio</th>
+      <th>Stock</th>
+      <th>Cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(plant of plants; track plant.name){
+      <tr [ngClass]="{
+        'clearance': plant.clearance && plant.stock > 0,
+        'no-stock': plant.stock === 0
+      }">
+        <td><img class="plant-img" [src]="plant.image" [alt]="plant.name"></td>
+        <td class="text-uppercase">{{ plant.name }}</td>
+        <td>{{ plant.type }}</td>
+        <td>{{ plant.price | currency }}</td>
+        @if (plant.stock > 0) {
+          <td>{{ plant.stock }} disponibles</td>
+        } @else {
+          <td><span class="stock-badge">Sin stock</span></td>
+        }
+        <td>
+          @if (plant.stock) {
+            <app-input-integer [(quantity)]="plant.quantity" [max]="plant.stock" (maxReached)="maxReached($event)"></app-input-integer>
+            <button class="btn btn-success btn-sm ms-2" (click)="addToCart(plant)">
+              <i class="bi bi-cart-plus"></i> Comprar
+            </button>
+          }
+        </td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="6">No hay plantas para mostrar en este momento.</td>
+      </tr>
+    }
+  </tbody>
+</table>
